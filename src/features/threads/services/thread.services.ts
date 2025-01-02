@@ -58,7 +58,7 @@ export const getAllThreads = async () => {
 
 export const getThreadById = async (token: string, idThread: string) => {
   try {
-    const res: AxiosResponse = await axios.get(apiURL + `/thread/${idThread}`, {
+    const res: AxiosResponse = await axios.get(apiURL + `thread/${idThread}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
