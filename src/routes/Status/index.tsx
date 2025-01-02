@@ -14,7 +14,7 @@ import { fetchCreateLike, fetchDeleteLike } from "@/features/threads/services/li
 import { createNewReply } from "@/features/threads/services/reply.service";
 import { UserRound, X } from "lucide-react";
 import UnauthorizedPage from "@/components/layouts/unauthorized";
-import { formatDate, monthsName } from "@/utils/format-date";
+import { monthsName } from "@/utils/format-date";
 
 const StatusPage = () => {
     const { idThread } = useParams();

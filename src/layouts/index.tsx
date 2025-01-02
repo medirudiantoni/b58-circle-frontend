@@ -3,7 +3,7 @@ import LeftSideOfMainLayout from "./leftSide";
 import RightSideOfMainLayout from "./rightSide";
 import React, { useEffect, useState } from "react";
 import arrowLeft from "@/assets/arrow-left.svg";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import BottomNavigation from "@/components/layouts/bottomNavigation";
 
 interface MainLayoutProps {
@@ -16,7 +16,7 @@ interface MainLayoutProps {
 const MainLayout: React.FC<MainLayoutProps> = ({ isBackBtn, titlePage, children, isUserProfilePage }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isLeftPanel, setIsLeftPanel] = useState(false);
-    const { pathname } = useLocation();
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {

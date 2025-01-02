@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { z } from "zod";
 import Cookies from "js-cookie";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const loginSchema = z.object({
   username: z.string().min(3, "Invalid username"),
