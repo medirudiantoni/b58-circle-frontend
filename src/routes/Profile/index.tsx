@@ -27,6 +27,10 @@ const UserProfilePage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log("cek: ", userData);
+    
+    console.log(typeof userData)
+
     setIsUnauth(userData ? false : true);
     retrieveUserThreads();
   }, [userData]);
@@ -74,7 +78,7 @@ const UserProfilePage = () => {
                   username={userData?.username as string}
                   fullname={userData?.fullname ? userData.fullname : userData?.username as string}
                   bio={userData?.bio}
-                  following={userData?.following.length}
+                  following={userData?.following ? userData.following.length : 0}
                   follower={userData?.follower.length}
                   onEditProfile={() => setEditProfile(true)} />
               ) : (

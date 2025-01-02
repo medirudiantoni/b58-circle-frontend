@@ -6,6 +6,11 @@ export type UserType = {
   email: string;
 };
 
+export type Follower = {
+  following?: UserDataType;
+  follower?: UserDataType;
+}
+
 export type UserDataType = {
   id: string,
   email: string,
@@ -16,7 +21,7 @@ export type UserDataType = {
   background?: string,
   bio? : string,
   following: [],
-  follower: [],
+  follower: Follower[],
   Like: LikeType[],
   Thread: ThreadDataType[],
 }

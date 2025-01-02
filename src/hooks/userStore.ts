@@ -13,7 +13,9 @@ const useUserStore = create<UserState>((set) => ({
   user: null,
   userData: null,
   setUser: (user) => set({ user: user }),
-  setUserData: (userData) => set({ userData: userData }),
+  setUserData: (userData) => set(() => {
+    return { userData: userData }
+  }),
   clearUser: () => set({ user: null }),
   clearUserData: () => set({ userData: null }),
 }));

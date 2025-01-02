@@ -28,3 +28,22 @@ export const fetchUserById = async (
 };
 
 
+export const fetchSearchUser = async (query: string) => {
+  try {
+    const res: AxiosResponse = await axios.get(
+      apiURL + `search?query=${query}`
+    );
+
+    return res.data;
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      console.error('Axios Error:', error.response?.data || error.message);
+      throw new Error(error.response?.data?.message || 'Something went wrong');
+    } else {
+      console.error('Unexpected Error:', error);
+      throw error;
+    }
+  }
+};
+
+
