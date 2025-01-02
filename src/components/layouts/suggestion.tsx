@@ -66,7 +66,13 @@ const Suggestion: React.FC<SuggestionProps> = ({ image, fullname, username, idSu
     }
     return (
         <HStack onClick={() => navigate(`/profile/${idObject}`)} cursor="pointer" gap={3} alignItems={bio ? "start" : "center"} py={2} px={4} _hover={{ bg: "theme.600" }}>
-            <UserProfile image={image} fullname={fullname} username={username} bio={bio} />
+            <UserProfile 
+                userId={idObject}
+                image={image} 
+                fullname={fullname} 
+                username={username} 
+                bio={bio} 
+                />
             <Box w="fit-content">
                 <Button
                     onClick={handleClick}

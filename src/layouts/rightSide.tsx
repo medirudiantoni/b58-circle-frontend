@@ -146,11 +146,11 @@ const RightSideOfMainLayout: React.FC<RightSideOfMainLayoutProps> = ({ isUserPro
                                         <Text fontSize="sm" mb={1.5}>{userData.bio}</Text>
                                         <HStack gap={3}>
                                             <Link to='/following'>
-                                                <span>{userData?.following.length}</span>
+                                                <span>{userData.following ? userData.following.length : null}</span>
                                                 <span style={{ fontSize: "14px", marginLeft: "4px", color: "#808080" }}>Following</span>
                                             </Link>
                                             <Link to='/followers'>
-                                                <span>{userData?.follower.length}</span>
+                                                <span>{userData.follower ? userData.follower.length : null}</span>
                                                 <span style={{ fontSize: "14px", marginLeft: "4px", color: "#808080" }}>Followers</span>
                                             </Link>
                                         </HStack>

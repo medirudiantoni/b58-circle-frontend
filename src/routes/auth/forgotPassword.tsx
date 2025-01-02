@@ -1,7 +1,7 @@
 import { Box, Button, Heading, HStack, Input, Text, VStack } from '@chakra-ui/react'
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { z } from "zod";
 
 const forgotPasswordSchema = z.object({
@@ -14,8 +14,6 @@ const ForgotPassword = () => {
   const { register, handleSubmit, formState: { errors } } = useForm<RegisterFormInput>({
     resolver: zodResolver(forgotPasswordSchema)
   });
-
-  const navigate = useNavigate();
 
   // const { addUser } = user
 

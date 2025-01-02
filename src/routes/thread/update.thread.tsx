@@ -3,22 +3,22 @@ import useThreadStore from '@/hooks/threadStore';
 import useUserStore from '@/hooks/userStore'
 import MainLayout from '@/layouts'
 import { Box, Button, HStack, Img, Input, Spinner, Text, Textarea } from '@chakra-ui/react'
-import { zodResolver } from '@hookform/resolvers/zod';
+// import { zodResolver } from '@hookform/resolvers/zod';
 import React, { useEffect, useRef, useState } from 'react';
-import { useForm } from 'react-hook-form';
+// import { useForm } from 'react-hook-form';
 import { useNavigate, useParams } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import z from "zod";
+// import z from "zod";
 import { getThreadById, updateThreadById } from '@/features/threads/services/thread.services';
 import addImage from "@/assets/add-image.svg";
 import { X } from 'lucide-react';
 import { ThreadDataType } from '@/types/thread.types';
 
-const threadSchema = z.object({
-    content: z.string().min(2, "post min 2 characters").max(280, "max 280 characters"),
-});
+// const threadSchema = z.object({
+//     content: z.string().min(2, "post min 2 characters").max(280, "max 280 characters"),
+// });
 
-type ThreadInput = z.infer<typeof threadSchema>
+// type ThreadInput = z.infer<typeof threadSchema>
 
 const UpdateThreadPage = () => {
     const { threadId } = useParams();
